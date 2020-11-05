@@ -85,4 +85,4 @@ export const ICON_MAP = {
 export const PLUGIN_STATE_KEY = 'pluginState';
 export const TOGGLE_BUTTON_HEIGHT = 24;
 export const WINDOW_WIDTH = 280;
-export const WINDOW_HEIGHT = 225;
+export const WINDOW_HEIGHT = 230;

@@ -82,7 +82,7 @@ const FindAndReplace = ({ data, actions }) => {
     return (
         <div
             style={{
-                padding: '15px',
+                padding: '8px 15px',
             }}
         >
             <Row>
@@ -178,7 +178,7 @@ const FindAndReplace = ({ data, actions }) => {
                     </ToggleButton>
                 </FlexBox>
             </Row>
-            <Row>
+            <Row style={{ marginTop: '15px' }}>
                 <Button tabIndex={0} onClick={handleClickReplaceAll}>
                     Replace All
                 </Button>
