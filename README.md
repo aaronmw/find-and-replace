@@ -1,13 +1,6 @@
-# React 
+# Find & Replace for Figma
 
-<img src="../_screenshots/webpack.png" width="400" />
-
-Creates rectangles (same as the [Webpack sample plugin][webpack]).
-
-This demonstrates:
-
-- bundling plugin code using Webpack, and
-- using React with TSX.
+https://www.figma.com/community/plugin/905964570877397972/Find-%26-Replace
 
 The main plugin code is in `src/code.ts`. The HTML for the UI is in
 `src/ui.html`, while the embedded JavaScript is in `src/ui.tsx`.
@@ -19,5 +12,3 @@ To build:
 
     $ npm install
     $ npx webpack
-
-[webpack]: ../webpack/
