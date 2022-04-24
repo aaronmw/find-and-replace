@@ -9,12 +9,14 @@ export const GlobalStyles = createGlobalStyle`
         outline: none;
         background-color: inherit;
         border: none;
-        font-size: 1rem; 
-        font-family: Inter, sans-serif;
+        font-size: inherit;
+        font-family: inherit;
+        letter-spacing: inherit;
         text-transform: inherit;
     }
     :root {
         line-height: 1.1rem;
+        font-family: Inter, sans-serif;
         font-size: 11px;
         letter-spacing: 0.5px;
         background: white;

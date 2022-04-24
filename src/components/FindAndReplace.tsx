@@ -1,17 +1,17 @@
-import * as React from 'react';
 import get from 'lodash/get';
+import * as React from 'react';
+import { FlexBox } from './ui/atoms/FlexBox';
 import { Row } from './ui/atoms/Row';
-import { sendMessage } from './utils/helper-functions';
 import {
     COLOR_TEXT_LIGHT,
     TOGGLE_BUTTON_HEIGHT,
     WINDOW_HEIGHT,
 } from './ui/atoms/tokens';
-import { FlexBox } from './ui/atoms/FlexBox';
 import { Button } from './ui/Button';
+import Icon from './ui/Icon';
 import Input from './ui/Input';
 import { ToggleButton } from './ui/ToggleButton';
-import Icon from './ui/Icon';
+import { sendMessage } from './utils/helper-functions';
 
 const FindAndReplace = ({ data, actions }) => {
     const { pluginState } = data;
@@ -90,7 +90,9 @@ const FindAndReplace = ({ data, actions }) => {
                     <div style={{ width: '100%' }}>
                         <Row>
                             <FlexBox isFullWidth>
-                                Find:
+                                <div style={{ color: COLOR_TEXT_LIGHT }}>
+                                    Find:
+                                </div>
                                 <FlexBox>
                                     <ToggleButton
                                         isActive={isCaseSensitive}
@@ -132,7 +134,8 @@ const FindAndReplace = ({ data, actions }) => {
                                 style={{
                                     fontFamily: isRegExp
                                         ? 'monospace'
-                                        : 'inherit',
+                                        : undefined,
+                                    fontSize: '1.2rem',
                                 }}
                                 tabIndex={0}
                                 type="text"
@@ -143,11 +146,17 @@ const FindAndReplace = ({ data, actions }) => {
                         </Row>
                         <Row>
                             <FlexBox
-                                style={{ height: `${TOGGLE_BUTTON_HEIGHT}px` }}
+                                style={{
+                                    height: `${TOGGLE_BUTTON_HEIGHT}px`,
+                                    color: COLOR_TEXT_LIGHT,
+                                }}
                             >
                                 Replace With:
                             </FlexBox>
                             <Input
+                                style={{
+                                    fontSize: '1.2rem',
+                                }}
                                 tabIndex={0}
                                 type="text"
                                 value={replacement}
@@ -157,13 +166,17 @@ const FindAndReplace = ({ data, actions }) => {
                             <div
                                 style={{
                                     color: COLOR_TEXT_LIGHT,
+                                    position: 'relative',
+                                    top: '0.5rem',
                                     visibility: isRegExp ? 'visible' : 'hidden',
                                 }}
                             >
                                 <code>
                                     $<em>n</em>
                                 </code>{' '}
-                                refers the <em>n</em>th bracketed submatch
+                                refers the <em>n</em>
+                                <sup style={{ fontSize: '0.7em' }}>th</sup>{' '}
+                                bracketed submatch
                             </div>
                         </Row>
                     </div>
